@@ -200,12 +200,41 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    z-index: 1;
     &_item {
       margin-top: 30px;
+      overflow: hidden;
+      & img {
+        transition: 0.5s all;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
     }
   }
 }
+
+// Section Enjoy
+
+.enjoy {
+  background: url('../img/enjoy-bg.jpg') center center/ cover no-repeat;
+  padding: 195px 0;
+  &__offer {
+    border: 10px solid $yellow;
+    background-color: rgba(#1f2027, 0.8);
+    text-align: center;
+    padding: 82px 0px;
+    margin: 0 auto;
+    max-width: 730px;
+    &_text {
+      font-size: 33px;
+      margin: 25px auto;
+      max-width: 540px;
+    }
+  }
+}
+
+// Section Menu
 
 
 @import "media";
