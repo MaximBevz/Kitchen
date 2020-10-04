@@ -8,10 +8,11 @@ $bg-color: #1d1d23;
 
 body {
   font-family: 'AachenBT', sans-serif;
-  // font-family: 'Montserrat',sans-serif;
   color: #fff;
   font-weight: 400;
+  max-width: 100%;
   overflow-x: hidden;
+  background-color: #1d1d23;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,6 +27,10 @@ h1 {
 
 h2 {
   font-size: 50px;
+}
+
+h4 {
+  font-size: 29px;
 }
 
 ul, li, p, a {
@@ -47,15 +52,72 @@ a {
   margin: 0 auto;
 }
 
+.menu-btn {
+  display: none;
+  	width: 30px;
+  	position: absolute;
+  	right: 40px;
+    top: 40px;
+    cursor: pointer;
+    &__wrapper {
+      position: relative;
+      height: 30px;
+    }
+    &__line {
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.5s all;
+    position: absolute;
+    &_first {
+      top: 0;
+    }
+    &_second {
+      top: 35%;
+      transform: translateY(50%);
+    }
+    &_third {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &_fourth {
+      bottom: 0;
+    }
+	}
+}
+
 
 // Section Header
 
 .header {
-  background: url('../img/top-bg.jpg') center center/cover no-repeat;
   padding: 40px 0px 120px;
+  overflow: hidden;
+  position: relative;
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: resize 30s infinite;
+  }
   & nav {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -89,6 +151,7 @@ a {
   margin-top: 110px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   &__info {
     width: 520px;
     margin-top: 65px;
@@ -235,6 +298,226 @@ a {
 }
 
 // Section Menu
+
+.menu-food {
+  background-color: $bg-color;
+  padding: 175px 0px 190px;
+  &__title {
+    text-align: center;
+  }
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 88px;
+  }
+  &__block {
+    max-width: 406px;
+    &_title {
+      color: $yellow;
+      margin-top: 44px;
+    }
+    &_descr {
+      font-size: 17px;
+      margin-top: 20px;
+    }
+    &_price {
+      color: $yellow;
+      margin-top: 25px;
+      font-size: 25px;
+    }
+  }
+}
+
+// Section Meal
+
+.meal {
+  background-color: #e58f00;
+  padding: 140px 0;
+  position: relative;
+  &__img {
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+  &__offer {
+    max-width: 490px;
+    margin-left: auto;
+    &_text {
+      font-size: 33px;
+    }
+  }
+}
+
+// Section Footer
+
+.footer {
+  background-color: $bg-color;
+  padding: 77px 0px 105px;
+  text-align: center;
+  &__menu {
+    margin-top: 57px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    &_item {
+      margin-right: 35px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &_link {
+      color: #e7e6e6;
+      font-size: 21px;
+      text-transform: uppercase;
+      transition: 0.5s all;
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+  &__social {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    & img {
+      transition: 0.5s all;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &_item {
+      margin-right: 25px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+//Modal
+
+.modal {
+  font-family: 'AachenBT', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 240px;
+    background-color: $yellow;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $bg-color;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s all;
+    &:hover {
+      box-shadow: 0 0 10px $yellow;
+    }
+  }
+}
+  .modal__dialog {
+    max-width: 500px;
+    margin: 0px auto; 
+    margin-top: 180px;
+  }
+  .modal__content {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    background-color: rgba(#1d1d23, 0.8);
+    border: 1px solid $yellow;
+    border-radius: 4px;
+    max-height: 80vh;
+    overflow-y: auto;
+   }
+  .modal__close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 30px;
+    color: $yellow;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s all;
+    &:hover {
+      text-shadow: 0px 0px 15px #e58f00;
+    } 
+  }
+  .modal__title {
+    font-family: 'AachenBT', sans-serif!important;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase; 
+    color: $yellow;
+  }
+  .modal__input {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 280px;
+    height: 50px;
+    background: rgba(#fff, 0.9);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+    outline: none; 
+    &:focus {
+      box-shadow: 0px 0px 15px rgba($yellow, 0.7);
+    }
+  }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block!important;
+}
+
+.show-menu {
+  transform: translateY(0)!important;
+}
+
+.fade {
+  animation: fade;
+  animation-duration: 1.5s;
+}
+
+.burger-active .menu-btn__line_first,
+.burger-active .menu-btn__line_fourth {
+  opacity: 0;
+}
+
+.burger-active .menu-btn__line_second {
+  transform: translateY(50%) rotate(45deg);
+}
+
+.burger-active .menu-btn__line_third {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }to {
+    opacity: 1;
+  }
+}
 
 
 @import "media";

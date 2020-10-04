@@ -44,7 +44,7 @@ gulp.task('script', function () {
 gulp.task('js', function () {
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/lightbox2/dist/js/lightbox-plus-jquery.js',
+    'node_modules/lightbox2/dist/js/lightbox.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
