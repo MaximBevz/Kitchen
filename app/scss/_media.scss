@@ -101,6 +101,9 @@
   .footer {
     padding-top: 100px;
   }
+  .meal__img {
+    top: -25%;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -109,6 +112,9 @@
   }
   .meal__img {
     width: 40%;
+  }
+  .meal__img {
+    top: -60%;
   }
 }
 
@@ -234,6 +240,9 @@
   .header nav {
     justify-content: flex-end;
   }
+  .meal__img {
+    top: -50%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -257,6 +266,9 @@
     width: 80%;
     margin-left: 20px;
   }
+  .meal__img {
+    top: -35%;
+  }
 }
 
 @media (max-width: 760px) {
@@ -268,6 +280,7 @@
     margin-right: 0;
     margin-top: 10px;
   }
+
 }
 
 @media (max-width: 750px) {
@@ -276,6 +289,9 @@
   }
   .meal__offer {
     max-width: 350px;
+  }
+  .meal__img {
+    top: -24%;
   }
 }
 
@@ -291,6 +307,9 @@
   }
   .enjoy {
     padding: 110px 0;
+  }
+  .meal__img {
+    top: -15%;
   }
 }
 
@@ -371,6 +390,9 @@
   .blog-fruits img {
     width: 40%;
   }
+  .meal__img {
+    top: -10%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -433,6 +455,9 @@
   .modal__input {
     padding: 0px;
   }
+  .meal__img {
+    top: -10%;
+  }
 }
 
 @media (max-width: 420px) {
@@ -476,6 +501,11 @@
   }
 }
 
+@media (max-width: 420px) {
+  .meal__img {
+    top: -10%;
+  }
+}
 @media (max-width: 380px) {
   .menu {
     transform: translateY(-200px);
@@ -487,5 +517,11 @@
   }
   .modal__content {
     margin-left: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .meal__img {
+    top: 3%;
   }
 }

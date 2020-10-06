@@ -337,8 +337,8 @@ a {
   &__img {
     position: absolute;
     left: 0;
-    transform: translateY(-50%);
-    top: 50%;
+    top: -15%;
+    animation: rotate 20s infinite;
   }
   &__offer {
     max-width: 490px;
@@ -346,6 +346,15 @@ a {
     &_text {
       font-size: 33px;
     }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

@@ -133,5 +133,15 @@ window.addEventListener('DOMContentLoaded', function() {
         item.classList.toggle('show-menu');
     });
   });
+// WOW animate init
+  new WOW().init();
+
+// Mousemoove Parallax
+  let bg = document.querySelector('#waffle');
+  window.addEventListener('mousemove', function (e) {
+    let x = e.clientX / window.innerWidth;
+    let y = e.clientY / window.innerHeight;
+    bg.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+  });
 });
 
