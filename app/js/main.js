@@ -69,7 +69,7 @@ window.addEventListener('DOMContentLoaded', function() {
     render() {
       const element = document.createElement('div');
       if (this.classes.langth === 0) {
-        this.element = 'menu__item';
+        this.element = 'menu-food__item';
         element.classList.add(this.element);
       } else {
         this.classes.forEach(className => element.classList.add(className));
@@ -90,7 +90,10 @@ window.addEventListener('DOMContentLoaded', function() {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis ipsum suspendisse',
     12,
     '.menu-food__blocks',
-    'menu-food__item'
+    'menu-food__item',
+    'animate__animated',
+    'wow',
+    'animate__fadeInUp'
   ).render();
 
   new CardInfo(
@@ -100,7 +103,10 @@ window.addEventListener('DOMContentLoaded', function() {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis ipsum suspendisse',
     15,
     '.menu-food__blocks',
-    'menu-food__item'
+    'menu-food__item',
+    'animate__animated',
+    'wow',
+    'animate__fadeInUp'
   ).render();
 
   new CardInfo(
@@ -110,7 +116,10 @@ window.addEventListener('DOMContentLoaded', function() {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Quis ipsum suspendisse',
     12,
     '.menu-food__blocks',
-    'menu-food__item'
+    'menu-food__item',
+    'animate__animated',
+    'wow',
+    'animate__fadeInUp'
   ).render();
 
     //Reload window
